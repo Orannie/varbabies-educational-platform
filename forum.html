@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University News & Applications - Future.VarBabies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forum.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="intro">
+            <header class="header">
+                <a href="index.html" class="logo"><img src="image/ChatGPT Image Jun 22, 2025, 11_41_25 PM.png"></a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-list-list"><a href="index.html">Home</a></li>
+                        <li class="nav-list-list"><a href="past-papers.html">Past-Papers</a></li>
+                        <li class="nav-list-list"><a href="forum.html" class="active">Forum</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </section>
+
+        <!-- Main Container following index.html design -->
+        <div class="container">
+            <main class="main1">
+                <h1>University News & Applications</h1>
+                <p class="main-p">Ekse mfethu, welcome to your university application hub! Stay updated with the latest news from South African universities, application deadlines, and funding opportunities. We've got everything you need to make informed decisions about your future. Filter by university, search for specific topics, and never miss important updates that could change your path to higher education.</p>
+                
+                <!-- Filter Section -->
+                <div class="filter-section">
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="search-news" placeholder="Search news and updates..." class="search-input">
+                    </div>
+
+                    <!-- Filter by University -->
+                    <div class="filter-group">
+                        <h4>Filter by University:</h4>
+                        <div class="filter-buttons" id="university-filters">
+                            <button class="filter-btn active" data-university="">All</button>
+                            <button class="filter-btn" data-university="wits">Wits</button>
+                            <button class="filter-btn" data-university="uct">UCT</button>
+                            <button class="filter-btn" data-university="stellenbosch">Stellenbosch</button>
+                            <button class="filter-btn" data-university="ukzn">UKZN</button>
+                            <button class="filter-btn" data-university="up">UP</button>
+                            <button class="filter-btn" data-university="unisa">UNISA</button>
+                            <button class="filter-btn" data-university="tut">TUT</button>
+                            <button class="filter-btn" data-university="cput">CPUT</button>
+                            <button class="filter-btn" data-university="uniwise">Uniwise</button>
+                        </div>
+                    </div>
+
+                    <!-- Filter by Category -->
+                    <div class="filter-group">
+                        <h4>Filter by Category:</h4>
+                        <div class="filter-buttons" id="category-filters">
+                            <button class="filter-btn active" data-category="">All</button>
+                            <button class="filter-btn" data-category="applications">Applications</button>
+                            <button class="filter-btn" data-category="deadlines">Deadlines</button>
+                            <button class="filter-btn" data-category="requirements">Requirements</button>
+                            <button class="filter-btn" data-category="funding">Funding & Scholarships</button>
+                            <button class="filter-btn" data-category="news">General News</button>
+                            <button class="filter-btn" data-category="events">Events</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Feed -->
+                <div class="news-section">
+                    <div class="news-header">
+                        <h3 class="section-title">Latest Updates</h3>
+                        <button class="refresh-btn" id="refresh-news" onclick="refreshNews()">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                    <div class="news-container" id="news-container">
+                        <!-- News items will be loaded here by JavaScript -->
+                    </div>
+                    <div class="loading-container" id="loading-container" style="display: none;">
+                        <i class="fas fa-spinner fa-spin loading-spinner"></i>
+                        <p>Fetching latest news...</p>
+                    </div>
+                    <div class="empty-state" id="empty-state" style="display: none;">
+                        <i class="fas fa-search-minus empty-icon"></i>
+                        <p>No news items match your current filters.<br>Try adjusting your search criteria.</p>
+                    </div>
+                </div>
+            </main>
+
+            <aside class="aside">
+                <h2>QUICK ACTIONS FOR YOU KINGS AND QUEENS</h2>
+                <br>
+                <p class="aside-p">Ready to take action? These tools will help you navigate your university journey like a boss. Whether you're applying, tracking progress, or looking for funding, we've got your back. Don't sleep on these opportunities - your future self will thank you for being proactive today!</p>
+                
+                <!-- Quick Actions in Sidebar -->
+                <div class="sidebar-actions">
+                    <a href="https://www.uniwise.co.za" target="_blank" class="sidebar-action-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h4>Visit Uniwise</h4>
+                            <p>Complete university guide</p>
+                        </div>
+                    </a>
+                    
+                    <div class="sidebar-action-card" onclick="showComingSoon('Application tracking')">
+                        <i class="fas fa-chart-line"></i>
+                        <div>
+                            <h4>Track Applications</h4>
+                            <p>Monitor your progress</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sidebar-action-card" onclick="showComingSoon('Document checklist')">
+                        <i class="fas fa-tasks"></i>
+                        <div>
+                            <h4>Document Checklist</h4>
+                            <p>Required documents</p>
+                        </div>
+                    </div>
+                    
+                    <a href="https://www.nsfas.org.za" target="_blank" class="sidebar-action-card">
+                        <i class="fas fa-dollar-sign"></i>
+                        <div>
+                            <h4>NSFAS Portal</h4>
+                            <p>Apply for financial aid</p>
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.dhet.gov.za" target="_blank" class="sidebar-action-card">
+                        <i class="fas fa-university"></i>
+                        <div>
+                            <h4>DHET</h4>
+                            <p>Higher Education info</p>
+                        </div>
+                    </a>
+                </div>
+            </aside>
+        </div>
+        
+        <!-- Footer - Same as index.html -->
+        <footer class="footer">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="past-papers.html">Past-Papers</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/orannieofficial?igsh=bTVuYjc2bjl1ZHF0" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Future.VarBabies</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="forum.js"></script>
+</body>
+</html>

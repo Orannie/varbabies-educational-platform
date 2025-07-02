@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Papers - VarBabies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="past-papers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="intro">
+            <header class="header">
+                <a href="index.html" class="logo"><img src="image/ChatGPT Image Jun 22, 2025, 11_41_25 PM.png" alt="VarBabies Logo"></a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-list-list"><a href="index.html">Home</a></li>
+                        <li class="nav-list-list"><a href="past-papers.html" class="active">Past-Papers</a></li>
+                        <li class="nav-list-list"><a href="forum.html">Forum</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </section>
+        
+        <div class="past-papers-container">
+        <!-- Header Section -->
+        <section class="past-papers-header">
+            <h1>Past Papers & Resources</h1>
+            <p class="subtitle">Your complete guide to mastering past papers and exam preparation</p>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+            <!-- Main Content Area -->
+            <main class="main-content">
+                <!-- Introduction -->
+                <section class="intro-section">
+                    <p class="intro-text">
+                        Struggling to know what kind of questions to expect in exams? This section gives you 
+                        easy access to official South African Grade 8-12 past papers, straight from the 
+                        Department of Basic Education. Practicing with past papers is one of the best ways 
+                        to prep - it helps you understand how questions are asked, where to focus, and how 
+                        questions are structured. Whether you're cramming or revising smart from day one, 
+                        these papers will help you level up your confidence and performance.
+                    </p>
+
+                    <!-- Main Access Button -->
+                    <div class="main-access-button" onclick="openSAPapers()">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="button-content">
+                            <h3>Access SA Papers</h3>
+                            <p>Official past papers from Department of Basic Education</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Image Slideshow -->
+                <section class="slideshow-section">
+                    <div class="slideshow-container">
+                        <div class="slideshow-wrapper">
+                            <div class="slide active">
+                                <img src="image/_.jpeg" alt="Motivational Image 1">
+                            </div>
+                            <div class="slide">
+                                <img src="image/Daisy Albright.jpeg" alt="Daisy Albright">
+                            </div>
+                            <div class="slide">
+                                <img src="image/download.jpeg" alt="Educational Motivation">
+                            </div>
+                            <div class="slide">
+                                <img src="image/NeuroTracker.jpeg" alt="NeuroTracker">
+                            </div>
+                            <div class="slide">
+                                <img src="image/This picture describes how scout is very intelligent and open-minded_.jpeg" alt="Scout Intelligence">
+                            </div>
+                        </div>
+                        
+                        <!-- Navigation buttons -->
+                        <button class="slide-btn prev-btn" onclick="changeSlide(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slide-btn next-btn" onclick="changeSlide(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        
+                        <!-- Dots indicator -->
+                        <div class="dots-container">
+                            <span class="dot active" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                            <span class="dot" onclick="currentSlide(5)"></span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Grade Categories -->
+                <section class="grades-section">
+                    <h2>Available Grades</h2>
+                    <p class="section-subtitle">Click any grade to access past papers on SA Papers website</p>
+                    
+                    <div class="grades-grid">
+                        <div class="grade-card" onclick="openSAPapers()">
+                            <div class="grade-header">
+                                <i class="fas fa-book"></i>
+                                <h3>Grade 8</h3>
+                            </div>
+                            <p class="subjects-title">Available Subjects:</p>
+                            <ul class="subjects-list">
+                                <li>Mathematics</li>
+                                <li>English</li>
+                                <li>Afrikaans</li>
+                                <li>Natural Sciences</li>
+                                <li>Social Sciences</li>
+                            </ul>
+                        </div>
+
+                        <div class="grade-card" onclick="openSAPapers()">
+                            <div class="grade-header">
+                                <i class="fas fa-book"></i>
+                                <h3>Grade 9</h3>
+                            </div>
+                            <p class="subjects-title">Available Subjects:</p>
+                            <ul class="subjects-list">
+                                <li>Mathematics</li>
+                                <li>English</li>
+                                <li>Afrikaans</li>
+                                <li>Natural Sciences</li>
+                                <li>Social Sciences</li>
+                            </ul>
+                        </div>
+
+                        <div class="grade-card" onclick="openSAPapers()">
+                            <div class="grade-header">
+                                <i class="fas fa-book"></i>
+                                <h3>Grade 10</h3>
+                            </div>
+                            <p class="subjects-title">Available Subjects:</p>
+                            <ul class="subjects-list">
+                                <li>Mathematics</li>
+                                <li>English</li>
+                                <li>Afrikaans</li>
+                                <li>Physical Sciences</li>
+                                <li>Life Sciences</li>
+                                <li>Geography</li>
+                                <li>History</li>
+                            </ul>
+                        </div>
+
+                        <div class="grade-card" onclick="openSAPapers()">
+                            <div class="grade-header">
+                                <i class="fas fa-book"></i>
+                                <h3>Grade 11</h3>
+                            </div>
+                            <p class="subjects-title">Available Subjects:</p>
+                            <ul class="subjects-list">
+                                <li>Mathematics</li>
+                                <li>English</li>
+                                <li>Afrikaans</li>
+                                <li>Physical Sciences</li>
+                                <li>Life Sciences</li>
+                                <li>Geography</li>
+                                <li>History</li>
+                                <li>Business Studies</li>
+                            </ul>
+                        </div>
+
+                        <div class="grade-card grade-12" onclick="openSAPapers()">
+                            <div class="grade-header">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h3>Grade 12</h3>
+                            </div>
+                            <p class="subjects-title">Available Subjects:</p>
+                            <ul class="subjects-list">
+                                <li>Mathematics</li>
+                                <li>English</li>
+                                <li>Afrikaans</li>
+                                <li>Physical Sciences</li>
+                                <li>Life Sciences</li>
+                                <li>Geography</li>
+                                <li>History</li>
+                                <li>Business Studies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Pro Tips Section -->
+                <section class="tips-section">
+                    <h2>Pro Tips for Using Past Papers</h2>
+                    <div class="tips-list">
+                        <div class="tip-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Time yourself when practicing</span>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Review marking schemes after attempting</span>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-target"></i>
+                            <span>Focus on areas where you lose marks</span>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Practice regularly, not just before exams</span>
+                        </div>
+                        <div class="tip-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Understand question patterns and formats</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <section class="quick-resources">
+                    <h2>QUICK ACCESS RESOURCES</h2>
+                    
+                    <div class="resource-group">
+                        <h3>Websites:</h3>
+                        <ul class="resource-list">
+                            <li><a href="https://www.sapastpapers.co.za" target="_blank">• SApastpapers.co.za</a></li>
+                            <li><a href="https://www.education.gov.za" target="_blank">• education.gov.za</a></li>
+                            <li><a href="https://wcedeportal.co.za" target="_blank">• wcedeportal.co.za</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resource-group">
+                        <h3>Apps:</h3>
+                        <ul class="resource-list">
+                            <li>• Novar App</li>
+                            <li>• SAPapers</li>
+                            <li>• Grade 12 Physical Science by JSDT</li>
+                            <li>• Anki (Flashcards)</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="study-resources">
+                    <h2>Study Resources</h2>
+                    <div class="resource-cards">
+                        <div class="resource-card">
+                            <i class="fas fa-clipboard-check"></i>
+                            <div class="resource-content">
+                                <h4>Marking Guidelines</h4>
+                                <p>Understand how answers are graded</p>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <div class="resource-content">
+                                <h4>Exam Tips</h4>
+                                <p>How to use past papers effectively</p>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <i class="fas fa-book-open"></i>
+                            <div class="resource-content">
+                                <h4>Curriculum Guide</h4>
+                                <p>Understand exam formats</p>
+                            </div>
+                        </div>
+                        <div class="resource-card">
+                            <i class="fas fa-stopwatch"></i>
+                            <div class="resource-content">
+                                <h4>Time Management</h4>
+                                <p>Practice with time limits</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </div>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+   
+        
+        <aside class="aside">
+            <h2>PSSSS....EXAM TIPS FOR YOU</h2>
+            <p class="aside-p">These past papers aren't just for practice - they're your secret weapon! Study the patterns, understand how questions are asked, and master the timing. Remember: work smart, not just hard. You got this, fam!</p>
+            
+
+        </aside>
+  
+
+   
+
+   
+   
+
+    <!-- Footer - Same as index.html -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Future.VarBabies</h3>
+                <p>Your plug for surviving and thriving in Grade 12</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="past-papers.html">Past Papers</a></li>
+                   
+                    <li><a href="contact.html">Forum</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/orannieofficial?igsh=bTVuYjc2bjl1ZHF0" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://wa.me/0683182937" target="_blank" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Future.VarBabies. All rights reserved.</p>
+            <p>Designed by Future.VarBabies Team | Made with ❤️ for Matric Students</p>
+        </div>
+    </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="past-papers.js"></script>
+    <script src="responsive-nav.js"></script>
+</body>
+</html>
